@@ -9,6 +9,9 @@
 .title-box {
     color: blueviolet;
 }
+.pageMainContent {
+    color: black;
+}
 
 </style>
 </head>
@@ -16,6 +19,12 @@
         <div class="title-box">
             <h1 th:text="${message}">New helloPage result</h1>
         </div>
+
+        <div class="pageMainContent">
+            <p>Today's date is:</p>
+            <p th:text="${date}"></p>
+        </div>
+
     </body>
 
 </html>

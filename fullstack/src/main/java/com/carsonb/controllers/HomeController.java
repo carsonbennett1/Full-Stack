@@ -21,6 +21,7 @@ public class HomeController {
     @GetMapping("/thyme")
     public String ShowHelloPage(Model model){
         model.addAttribute("message", "Have a great day :)");
+        model.addAttribute("date", "2025-02-09");
         return "helloPage";
     }
 }
