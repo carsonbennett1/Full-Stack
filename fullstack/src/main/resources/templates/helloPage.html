@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
+<style>
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title-box {
+    color: blueviolet;
+}
+
+</style>
 </head>
-
-<body>
-
-</body>
+    <body>
+        <div class="title-box">
+            <h1 th:text="${message}">New helloPage result</h1>
+        </div>
+    </body>
 
 </html>
