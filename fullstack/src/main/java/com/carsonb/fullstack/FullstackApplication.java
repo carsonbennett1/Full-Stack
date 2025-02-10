@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 // @ComponentScan --> Scope of where Sprinboot will look for other files
 // @Controller (MVC controller) --> Request handling methods 
 
+// ******* mvn spring-boot:run --> To run localhost:8080 *******
+
 @SpringBootApplication
 @ComponentScan("com.carsonb")
 public class FullstackApplication {

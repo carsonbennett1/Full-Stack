@@ -45,4 +45,19 @@ public class HomeController {
         return "printPeople";
     }
 
+    @GetMapping("/peopleJSON")
+    @ResponseBody
+    public List<Person> showPeopleJSON(Model model){
+        List<Person> people = new ArrayList<Person>();
+        people.add(new Person(0, "Scott", 24));
+        people.add(new Person(1, "Jason", 33));
+        people.add(new Person(2, "Paul", 12));
+        people.add(new Person(3, "Trevor", 42));
+
+        System.out.println(people);
+
+        model.addAttribute("people", people);
+        return people;
+    }
+
 }
