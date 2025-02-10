@@ -16,7 +16,7 @@ public class FullstackApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FullstackApplication.class, args);
-		System.out.println("Hello World!");
+		System.out.println(" ----> Spring boot has loaded web page at localhost:8080!");
 	}
 
 }
