@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 th:text="${title}"></h2>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">OrderNo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="order: ${orders}">
+            <td th:text="${order.id}">Id</td>
+            <td th:text="${order.orderNo}">OrderNo</td>
+            <td th:text="${order.productName}">ProductName</td>
+            <td th:text="${order.price}">Price</td>
+            <td th:text="${order.quantity}">Quantity</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
