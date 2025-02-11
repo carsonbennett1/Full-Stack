@@ -2,15 +2,12 @@ package com.carsonb.services;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.carsonb.models.OrderModel;
 
 // Helps Autowired point to correct service
 @Service
-@Primary
 public class OrdersBusinessService2 implements OrdersBusinessServiceInterface{
 
     @Override
@@ -31,6 +28,16 @@ public class OrdersBusinessService2 implements OrdersBusinessServiceInterface{
         
         return orders;
 
+    }
+
+    @Override
+    public void init() {
+        System.out.println("Init method of Orders Business Service 2");
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("Destroy method of the Orders Business Service 2");
     }
     
 }
