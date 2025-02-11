@@ -1,13 +1,10 @@
-package com.carsonb.services;
+package com.carsonb.data;
 
 import java.util.List;
 
 import com.carsonb.models.OrderModel;
 
-public interface OrdersBusinessServiceInterface {
-    public void test();
-    public void init();
-    public void destroy();
+public interface OrdersDataAccessInterface {
 
     public OrderModel getById(long id);
     public List<OrderModel> getOrders();
@@ -19,4 +16,4 @@ public interface OrdersBusinessServiceInterface {
 
     public OrderModel updateOne(long idToUpdate, OrderModel updateOrder);
     
-} 
+}
