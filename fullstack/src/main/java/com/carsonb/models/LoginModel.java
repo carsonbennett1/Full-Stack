@@ -1,8 +1,16 @@
 package com.carsonb.models;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class LoginModel {
 
+    @NotBlank(message="Username field must be completed")
+    @Size(min=5, max=15, message="Username must be between 5 and 15 characters")
     private String username;
+
+    @NotBlank(message="Password field must be completed")
+    @Size(min=7, max=25, message="password must be between 7 and 25 characters")
     private String password;
 
     public LoginModel(String username, String password){

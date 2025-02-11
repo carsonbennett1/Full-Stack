@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.carsonb.models.LoginModel;
 
+import jakarta.validation.Valid;
+
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 
 @Controller
 @RequestMapping("/login")
@@ -22,8 +25,13 @@ public class LoginController {
     }
 
     @PostMapping("/processLogin")
-    public String processLogin(LoginModel loginModel, Model model){
+    public String processLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model){
         
+        if(bindingResult.hasErrors()){
+            model.addAttribute("loginModel", loginModel);
+            return "loginForm.html";
+        }
+
         model.addAttribute("loginModel", loginModel);
 
         return "loginResults.html";
